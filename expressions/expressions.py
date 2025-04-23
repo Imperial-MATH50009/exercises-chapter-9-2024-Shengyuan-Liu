@@ -183,7 +183,7 @@ def differentiate(expr, *o, var=None):
     """."""
     raise NotImplementedError(
         f"No differentiation rule for {type(expr).__name__}"
-        )
+    )
 
 
 @differentiate.register
@@ -229,4 +229,4 @@ def _(expr: Pow, *o, var=None):
     else:
         raise NotImplementedError(
             "Differentiation where variable is in exponent not supported."
-            )
+        )
